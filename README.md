@@ -1,4 +1,9 @@
 webdev
 ======
 
-Mainly for testing web development tools
+For testing web development tools
+
+Manifest
+--------
+
+flask/  - for testing Flask microframework
