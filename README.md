@@ -5,12 +5,13 @@ For testing web development tools
 
 ## Manifest
 
-flask/  - for testing Flask microframework
+* flask/  - for testing Flask microframework
 
 ## todo-list application
 
-Flask backend
-MySQL database
+* Flask backend
+* MySQL database
+* Frontend TODO
 
 ### Operation:
 
