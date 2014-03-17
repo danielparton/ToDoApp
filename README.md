@@ -7,6 +7,8 @@ Currently hosted on an Amazon EC2 instance:
 
 http://ec2-54-227-62-182.compute-1.amazonaws.com/ToDoClient/
 
+Feel free to play around with the to-do list. Number of tasks is limited to 10.
+
 ## Architecture
 
 * Backend
@@ -17,13 +19,15 @@ http://ec2-54-227-62-182.compute-1.amazonaws.com/ToDoClient/
     * API requests via jQuery
     * MVVM framework (including templating, event handling) via Knockout
 
+Both backend and frontend are hosted by Apache as virtual hosts.
+
 ## Manifest
 
 * MySQL/  - scripts for initializing and testing the MySQL database
 * flask/  - Python Flask HTTP backend server
 * html/   - HTML/JavaScript frontend
 
-## Operation of the Flask built-in server:
+## Notes on using the database API (using the Flask built-in server on a local machine):
 
 Leave this running:
 
