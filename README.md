@@ -1,23 +1,33 @@
-webdev
-======
+ToDoApp
+=======
 
-For testing web development tools
+A simple to-do list web application.
+
+Currently hosted on an Amazon EC2 instance:
+
+http://ec2-54-227-62-182.compute-1.amazonaws.com/ToDoClient/
+
+## Architecture
+
+* Backend
+    * MySQL database
+    * Python Flask RESTful HTTP server
+* Frontend
+    * Components and styling via Bootstrap
+    * API requests via jQuery
+    * MVVM framework (including templating, event handling) via Knockout
 
 ## Manifest
 
-* flask/  - for testing Flask microframework
+* MySQL/  - scripts for initializing and testing the MySQL database
+* flask/  - Python Flask HTTP backend server
+* html/   - HTML/JavaScript frontend
 
-## todo-list application
-
-* Flask backend
-* MySQL database
-* Frontend TODO
-
-### Operation:
+## Operation of the Flask built-in server:
 
 Leave this running:
 
-    ./flask/todo.py
+    python flask/todo.py
 
 To get list of tasks from browser, enter:
 
