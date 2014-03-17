@@ -11,12 +11,13 @@ with connection:
 
     # column headers
     column_headers = cursor.description
-    print column_headers
+    #print column_headers
 
     # fetch all rows
     rows = cursor.fetchall()
     for row in rows:
-        print row
+        #print row
+        pass
 
     # may be unfeasible to fetch all rows
     # instead can fetch one row at a time
@@ -26,7 +27,8 @@ with connection:
 
     # the cursor class implements the iterator protocol, so this is another approach
     for row in cursor:
-        print row
+        #print row
+        pass
 
     # this cursor returns rows as dicts
     cursor2 = connection.cursor(mdb.cursors.DictCursor)
