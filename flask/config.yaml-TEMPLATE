@@ -1,0 +1,3 @@
+# rename this file to 'config.yaml' and put in the same directory as ToDoApp.py
+mysqlusername: exampleusername
+mysqlpassword: examplepassword

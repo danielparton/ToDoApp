@@ -1,10 +1,22 @@
 #!/usr/bin/env python
-
-# Create and populate a table
-
 import MySQLdb as mdb
+import yaml
 
-connection = mdb.connect('localhost', 'DLPtest', 'DLPtest', 'python_test')
+# ======
+# Read MySQL user credentials from a configuration file
+# ======
+
+with open('config.yaml', 'r') as configfile:
+    config_settings = yaml.load(configfile)
+mysqlusername = config_settings['mysqlusername']
+mysqlpassword = config_settings['mysqlpassword']
+
+
+# ======
+# Create and populate a table
+# ======
+
+connection = mdb.connect('localhost', mysqlusername, mysqlpassword, 'python_test')
 
 with connection:
     cursor = connection.cursor(mdb.cursors.DictCursor)

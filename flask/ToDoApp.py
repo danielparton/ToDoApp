@@ -1,5 +1,16 @@
 #!/usr/bin/env python
 from flask import Flask, jsonify, request, abort, make_response
+import yaml
+
+# ======
+# Read MySQL user credentials from a configuration file
+# ======
+
+with open('config.yaml', 'r') as configfile:
+    config_settings = yaml.load(configfile)
+mysqlusername = config_settings['mysqlusername']
+mysqlpassword = config_settings['mysqlpassword']
+
 
 # ======
 # Set up the Flask app and read in the MySQL db
@@ -9,7 +20,7 @@ app = Flask(__name__)
 
 import MySQLdb as mdb
 
-connection = mdb.connect('localhost', 'DLPtest', 'DLPtest', 'python_test')
+connection = mdb.connect('localhost', mysqlusername, mysqlpassword, 'python_test')
 
 tasks_base_url = 'http://ec2-54-227-62-182.compute-1.amazonaws.com/todo/tasks'
 

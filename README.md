@@ -42,6 +42,21 @@ Both backend and frontend are hosted by Apache as virtual hosts.
 * flask/  - Python Flask HTTP backend server
 * html/   - HTML/JavaScript frontend
 
+## Installation notes
+
+The exact installation process will likely be highly dependent upon your server
+set-up, so I only give here a few basic details here.
+
+Please edit flask/backend-config.yaml-TEMPLATE with your own MySQL
+authorization credentials, then rename to the file to 'backend-config.yaml'.
+
+The various source files will need to be moved to the appropriate locations on
+your server(s). The frontend consists of one file: html/index.html.  The
+backend consists of flask/ToDoApp.py, flask/backend-config.yaml, and the
+scripts in the MySQL directory. These backend files would ideally be put
+together in the same folder. The frontend and backend should be hosted as
+separate servers (or virtual hosts).
+
 ## Notes on using the database API (using the Flask built-in server on a local machine):
 
 Leave this running:
