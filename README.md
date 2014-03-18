@@ -9,6 +9,21 @@ http://ec2-54-227-62-182.compute-1.amazonaws.com/ToDoClient/
 
 Feel free to play around with the to-do list. Number of tasks is limited to 10.
 
+This application is closely based on the tutorials by Miguel Grinberg:
+
+https://github.com/miguelgrinberg/REST-tutorial
+
+http://blog.miguelgrinberg.com/post/designing-a-restful-api-with-python-and-flask
+
+http://blog.miguelgrinberg.com/post/writing-a-javascript-rest-client
+
+I made a few changes, such as using MySQL for data storage, using Apache
+virtual hosts to host the server and client, and I removed the user-login
+feature. The latter change was to avoid communicating user login details
+insecurely, since a) I am serving the application over HTTP, not HTTPS, and b)
+this is my first network app so I didn't feel like taking the risk of trying to
+make login access secure.
+
 ## Architecture
 
 * Backend
