@@ -53,9 +53,9 @@ authorization credentials, then rename to the file to 'backend-config.yaml'.
 The various source files will need to be moved to the appropriate locations on
 your server(s). The frontend consists of one file: html/index.html.  The
 backend consists of flask/ToDoApp.py, flask/backend-config.yaml, and the
-scripts in the MySQL directory. These backend files would ideally be put
-together in the same folder. The frontend and backend should be hosted as
-separate servers (or virtual hosts).
+scripts in the MySQL directory. These backend files should be put together in
+the same folder. The frontend and backend should be hosted as separate servers
+(or virtual hosts).
 
 ## Notes on using the database API (using the Flask built-in server on a local machine):
 

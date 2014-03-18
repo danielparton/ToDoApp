@@ -1,12 +1,15 @@
 #!/usr/bin/env python
 from flask import Flask, jsonify, request, abort, make_response
-import yaml
+import yaml, os, sys, inspect
 
 # ======
 # Read MySQL user credentials from a configuration file
 # ======
 
-with open('config.yaml', 'r') as configfile:
+this_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+config_filepath = os.path.join(this_dir, 'config.yaml')
+
+with open(config_filepath, 'r') as configfile:
     config_settings = yaml.load(configfile)
 mysqlusername = config_settings['mysqlusername']
 mysqlpassword = config_settings['mysqlpassword']
