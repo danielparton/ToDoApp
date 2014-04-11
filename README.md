@@ -21,8 +21,8 @@ I made a few changes, such as using MySQL for data storage, using Apache
 virtual hosts to host the server and client, and I removed the user-login
 feature. The latter change was to avoid communicating user login details
 insecurely, since a) I am serving the application over HTTP, not HTTPS, and b)
-this is my first network app so I didn't feel like taking the risk of trying to
-make login access secure.
+this is my first network app and I didn't want to risk compromising people's
+data if I do something wrong...
 
 ## Architecture
 
