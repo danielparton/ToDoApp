@@ -1,4 +1,4 @@
 import sys
 sys.path.insert(0, '/var/www/ToDoApp')
 
-from ToDoApp import app as application
+from ToDoApp-sqlite import app as application

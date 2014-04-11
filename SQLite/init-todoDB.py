@@ -19,6 +19,6 @@ with sqlite3.connect(db_path) as connection:
     cursor.execute("INSERT INTO todo_list(title, description, complete) VALUES('Complete ToDo app', 'Get this web-app working.', '1')")
     cursor.execute("SELECT rowid FROM todo_list ORDER BY rowid DESC LIMIT 1")
     first_task_id = cursor.fetchone()[0]
-    first_task_uri = 'http://ec2-54-227-62-182.compute-1.amazonaws.com/todo/tasks/%d' % first_task_id
+    first_task_uri = 'http://ec2-54-227-62-182.compute-1.amazonaws.com/todo/tasks/' + str(first_task_id)
     cursor.execute("UPDATE todo_list SET uri=? WHERE rowid=?", (first_task_uri, first_task_id))
 

@@ -75,6 +75,11 @@ To add a task, enter (for example):
 
     curl -i -H "Content-Type: application/json" -X POST -d '{"title":"Learn Flask"}' http://localhost:5000/todo/tasks
 
-To delete a task by task ID (defined in the URL) (for example):
+To edit a task:
+
+    curl -i -H "Content-Type: application/json" -X PUT -d '{"title":"Learn Flask", "description":"", "complete":1}' http://localhost:5000/todo/tasks/2
+
+To delete a task by task ID (defined in the URL):
 
     curl -i -X DELETE http://localhost:5000/todo/tasks/2
+
