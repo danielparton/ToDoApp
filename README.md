@@ -17,17 +17,17 @@ http://blog.miguelgrinberg.com/post/designing-a-restful-api-with-python-and-flas
 
 http://blog.miguelgrinberg.com/post/writing-a-javascript-rest-client
 
-I made a few changes, such as using MySQL for data storage, using Apache
-virtual hosts to host the server and client, and I removed the user-login
-feature. The latter change was to avoid communicating user login details
-insecurely, since a) I am serving the application over HTTP, not HTTPS, and b)
-this is my first network app and I didn't want to risk compromising people's
-data if I do something wrong...
+I made a few changes, such as using MySQL (or SQLite) for data storage, using
+Apache virtual hosts to host the server and client, and I removed the
+user-login feature. The latter change was to avoid communicating user login
+details insecurely, since a) I am serving the application over HTTP, not HTTPS,
+and b) this is my first network app and I didn't want to risk compromising
+people's data if I do something wrong...
 
 ## Architecture
 
 * Backend
-    * MySQL database
+    * Choice of MySQL or SQLite database
     * Python Flask RESTful HTTP server
 * Frontend
     * Components and styling via Bootstrap
@@ -39,6 +39,7 @@ Both backend and frontend are hosted by Apache as virtual hosts.
 ## Manifest
 
 * MySQL/  - scripts for initializing and testing the MySQL database
+* SQLite/  - scripts for initializing and testing the SQLite database
 * flask/  - Python Flask HTTP backend server
 * html/   - HTML/JavaScript frontend
 
