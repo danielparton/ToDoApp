@@ -45,7 +45,18 @@ Both backend and frontend are hosted by Apache as virtual hosts.
 ## Installation notes
 
 The exact installation process will likely be highly dependent upon your server
-set-up, so I only give here a few basic details here.
+set-up, so I give only here a few basic details here.
+
+### SQLite version
+
+First use the SQLite script init-todoDB.py to generate an initial database
+file, which will be named todo\_list.db. Now copy the HTML frontend
+(html/index.html) and Python backend (flask/ToDoApp.py) to the appropriate
+locations on your server(s). In the same directory as the Python backend app,
+create a subdirectory named 'database' and copy the database file
+(todo\_list.db) there.
+
+### MySQL version
 
 Please edit flask/backend-config.yaml-TEMPLATE with your own MySQL
 authorization credentials, then rename to the file to 'backend-config.yaml'.

@@ -8,7 +8,8 @@ app = Flask(__name__)
 # Parameters
 # ======
 
-db_path = '../SQLite/todo_list.db'
+this_script_dir = os.path.dirname(os.path.realpath(__file__))
+db_path = os.path.join(this_script_dir, 'database', 'todo_list.db')
 tasks_base_url = 'http://ec2-54-227-62-182.compute-1.amazonaws.com/todo/tasks'
 maxtasks = 10
 
@@ -175,6 +176,8 @@ def update_task(task_id):
     # return the row just updated
     cursor.execute("SELECT * FROM todo_list WHERE rowid=?", str(task_id))
     updated_task = cursor.fetchone()
+
+    db.commit()
 
     return jsonify( { 'task': updated_task } )
 
